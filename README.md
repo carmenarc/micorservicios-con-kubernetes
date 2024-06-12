@@ -49,10 +49,11 @@ Este comando imprime una serie de variables de entorno que configuran Docker par
 Para Windows PowerShell, configura manualmente las variables de entorno proporcionadas por el comando anterior. Copia y pega los comandos generados por `minikube docker-env`:
 
 ```powershell
-$Env:DOCKER_TLS_VERIFY = "1"
-$Env:DOCKER_HOST = "tcp://<MINIKUBE_IP>:2376"
-$Env:DOCKER_CERT_PATH = "C:\Users\CursosTardes\.minikube\certs"
-$Env:MINIKUBE_ACTIVE_DOCKERD = "minikube"
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://xx-xx.x:53340"
+export DOCKER_CERT_PATH="C:\Users\CursosTardes\.minikube\certs"
+export MINIKUBE_ACTIVE_DOCKERD="minikube"
+
 ```
 
 ### 3. Obtener la dirección IP de Minikube y reemplazarla en el archivo deployment.yaml
